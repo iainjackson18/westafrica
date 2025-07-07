@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_262d7606437b59816c622a5f1982ad77 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; 
+            bottom: 50px; left: 50px; width: 180px; height: 220px; 
+            background-color: white; border:2px solid grey; z-index:9999; 
+            font-size:14px; padding: 10px">
+<p><b>West Africa Archives</b></p>
+<p><i class="fa fa-circle" style="color:blue"></i> University</p>
+<p><i class="fa fa-circle" style="color:red"></i> Museum</p>
+<p><i class="fa fa-circle" style="color:green"></i> Gallery</p>
+<p><i class="fa fa-circle" style="color:purple"></i> Church</p>
+<p><i class="fa fa-circle" style="color:orange"></i> Archives</p>
+<p><i class="fa fa-circle" style="color:darkblue"></i> Library</p>
+<p><i class="fa fa-circle" style="color:pink"></i> Historical Society</p>
+<p style="font-size:12px; margin-top:10px;"><i>Click markers for detailed content</i></p>
+</div>
+    
+            <div class="folium-map" id="map_262d7606437b59816c622a5f1982ad77" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_262d7606437b59816c622a5f1982ad77 = L.map(
+                "map_262d7606437b59816c622a5f1982ad77",
+                {
+                    center: [53.4084, -2.9916],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d61caf26019b040ad5fdc867f35e6b1f = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d61caf26019b040ad5fdc867f35e6b1f.addTo(map_262d7606437b59816c622a5f1982ad77);
+        
+    
+            var marker_ed262ef5ef5b9a589616438b1fa99485 = L.marker(
+                [53.47816, -2.24417],
+                {
+}
+            ).addTo(map_262d7606437b59816c622a5f1982ad77);
+        
+    
+            var icon_88ae6f666243d81e24222422d5748fab = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0a007ac9fac3ca3fae2753c8b4d76233 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_02664d46b6e45d2fbce43394b72b33e7 = $(`<div id="html_02664d46b6e45d2fbce43394b72b33e7" style="width: 100.0%; height: 100.0%;">         <div style="width: 400px;">         <h4>Manchester Archives</h4>         <p><b>Location:</b> Manchester Central Library, St. Peters Square, Manchester M2 5PD</p>         <p><b>Type:</b> Archives</p>         <p><b>Website:</b> <a href="https://www.manchester.gov.uk/info/448/archives_and_local_history" target="_blank">Visit Website</a></p>         <p><b>Contact:</b> archiveslocalstudies@manchester.gov.uk</p>         <hr>         <h5>Archive Contents:</h5>         <div style="max-height: 300px; overflow-y: auto;">         <b>Thematic Coverage:</b> Everything within the archive department can be found through the online catalogue (see finding aid above). For specialist interest connect with the archive department directly. The following two search links were reccomended… Link 01 - https://www.manchester.gov.uk/info/448/archives_and_local_history/7378/access_our _archives_rare_books_and_collections/2 Link 02 - https://www.manchester.gov.uk/directory_record/212380/ethnic_minorities<br><br><b>Finding Aids:</b> www.gmlives.org.uk<br><br><b>Access Requirements:</b> By appointment Mon-Thu (09:00-20:00) Fri-Sat (09:00-17:00)         </div>         </div>         </div>`)[0];
+                popup_0a007ac9fac3ca3fae2753c8b4d76233.setContent(html_02664d46b6e45d2fbce43394b72b33e7);
+            
+        
+
+        marker_ed262ef5ef5b9a589616438b1fa99485.bindPopup(popup_0a007ac9fac3ca3fae2753c8b4d76233)
+        ;
+
+        
+    
+    
+            marker_ed262ef5ef5b9a589616438b1fa99485.bindTooltip(
+                `<div>
+                     Manchester Archives - Click for detailed content
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ed262ef5ef5b9a589616438b1fa99485.setIcon(icon_88ae6f666243d81e24222422d5748fab);
+            
+    
+            var marker_7eb908a0f565656a16fd73ba7f8051a8 = L.marker(
+                [53.40133, -2.99292],
+                {
+}
+            ).addTo(map_262d7606437b59816c622a5f1982ad77);
+        
+    
+            var icon_98d1230b04d84fa08ea6201831336b0d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6967ac989815bc04d3aff818b72fb36b = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_787d3fdc4f11ec45649ee02e14e0dbd4 = $(`<div id="html_787d3fdc4f11ec45649ee02e14e0dbd4" style="width: 100.0%; height: 100.0%;">         <div style="width: 400px;">         <h4>Maritime Museum</h4>         <p><b>Location:</b> Royal Albert Dock, Liverpool L3 4AQ</p>         <p><b>Type:</b> Museum</p>         <p><b>Website:</b> <a href="https://www.liverpoolmuseums.org.uk/maritime-museum" target="_blank">Visit Website</a></p>         <p><b>Contact:</b> maritime@liverpoolmuseums.org.uk</p>         <hr>         <h5>Archive Contents:</h5>         <div style="max-height: 300px; overflow-y: auto;">         <b>Gambia Materials:</b> Secondary references to these countries are made within the permanent exhibitions.<br><br><b>Thematic Coverage:</b> Ground Floor: History & Construction of the Three Graces on Liverpool waterfront First Floor: History of the ship Lusitania Second Floor: Liverpool shipping history & the story of the Titanic ship & Archives Third Floor: Museum of Slavery Within all the permanent exhibitions there are references to West Africa and the slave trade.<br><br><b>Access Requirements:</b> Tues-Sun (10:00-18:00)         </div>         </div>         </div>`)[0];
+                popup_6967ac989815bc04d3aff818b72fb36b.setContent(html_787d3fdc4f11ec45649ee02e14e0dbd4);
+            
+        
+
+        marker_7eb908a0f565656a16fd73ba7f8051a8.bindPopup(popup_6967ac989815bc04d3aff818b72fb36b)
+        ;
+
+        
+    
+    
+            marker_7eb908a0f565656a16fd73ba7f8051a8.bindTooltip(
+                `<div>
+                     Maritime Museum - Click for detailed content
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7eb908a0f565656a16fd73ba7f8051a8.setIcon(icon_98d1230b04d84fa08ea6201831336b0d);
+            
+    
+            var marker_5e936c77c3acfc3b746f22b06b47e905 = L.marker(
+                [53.40132, -2.99294],
+                {
+}
+            ).addTo(map_262d7606437b59816c622a5f1982ad77);
+        
+    
+            var icon_68b33794fa52152b7eb20d2a71fe4d52 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_eb549060c5e2d3975e6e0b89662484f8 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_61ba168089cd4d3fcdd3d94261ff08e1 = $(`<div id="html_61ba168089cd4d3fcdd3d94261ff08e1" style="width: 100.0%; height: 100.0%;">         <div style="width: 400px;">         <h4>Maritime Museum Archives</h4>         <p><b>Location:</b> 2nd Floor, Maritime Museum, Royal Albert Dock, Liverpool L3 4AQ</p>         <p><b>Type:</b> Museum</p>         <p><b>Website:</b> <a href="https://www.liverpoolmuseums.org.uk/collections/maritime-museum-collections/" target="_blank">Visit Website</a></p>         <p><b>Contact:</b> maritime.archives@liverpoolmuseums.org.uk</p>         <hr>         <h5>Archive Contents:</h5>         <div style="max-height: 300px; overflow-y: auto;">         <b>Gambia Materials:</b> Specific information about Nigeria is contained in the archive material.<br><br><b>Thematic Coverage:</b> Elder Dempster, Professor Davis Collection. This is a collection of papers (File 01). Elder Dempster, Ocean Archive. Approx 6m x 3m of material (File 02).  John Holt (Shipping Magnate) Archive. Approx 12m x 3m of material (File 03). [There is further material located in the Research Store, North Street which can be accessed by appointment on the last Tues of the month] Nigeria Marine Archive. Approx 5 boxes of material (File 04).  Two books reccomended: 'The Elder Dempster Fleet History 1852-1985' (James E Cowden & John OC Duffy) & 'The Trade Makers: Elder Dempster in West Africa 1852-1989' (Peter N. Davies)<br><br><b>Finding Aids:</b> Two guide books to the archives (Volume 1&2) & Four Index Catalogues: Elder Dempster (See File 01&02 below), John Holt (See File 03 below) & Nigeria Marine (See File 04 below)<br><br><b>Access Requirements:</b> Wed-Fri (10:30-12:30 & 13:30-16:00)         </div>         </div>         </div>`)[0];
+                popup_eb549060c5e2d3975e6e0b89662484f8.setContent(html_61ba168089cd4d3fcdd3d94261ff08e1);
+            
+        
+
+        marker_5e936c77c3acfc3b746f22b06b47e905.bindPopup(popup_eb549060c5e2d3975e6e0b89662484f8)
+        ;
+
+        
+    
+    
+            marker_5e936c77c3acfc3b746f22b06b47e905.bindTooltip(
+                `<div>
+                     Maritime Museum Archives - Click for detailed content
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5e936c77c3acfc3b746f22b06b47e905.setIcon(icon_68b33794fa52152b7eb20d2a71fe4d52);
+            
+    
+            var marker_12f11d766099f8ab82c8c996cdcce143 = L.marker(
+                [53.40347, -2.99561],
+                {
+}
+            ).addTo(map_262d7606437b59816c622a5f1982ad77);
+        
+    
+            var icon_7a8e4186825b434a19f06f8787e9fc7e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a467a752449453bbaa9c31bf3cfa16bd = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_0c9f9d3425465df2d22c9d2253a21d3a = $(`<div id="html_0c9f9d3425465df2d22c9d2253a21d3a" style="width: 100.0%; height: 100.0%;">         <div style="width: 400px;">         <h4>Museum of Liverpool</h4>         <p><b>Location:</b> Pier Head, Liverpool L3 1DG</p>         <p><b>Type:</b> Museum</p>         <p><b>Website:</b> <a href="https://www.liverpoolmuseums.org.uk/museum-of-liverpool" target="_blank">Visit Website</a></p>         <p><b>Contact:</b> museumofliverpool@liverpoolmuseums.org.uk</p>         <hr>         <h5>Archive Contents:</h5>         <div style="max-height: 300px; overflow-y: auto;">         <b>Gambia Materials:</b> The permanent exhibition contains information about Liverpool and trade with West Africa. This includes content about the slave trade, shipping history and leading shipping merchants.<br><br><b>Access Requirements:</b> Tues-Sun (10:00-18:00)         </div>         </div>         </div>`)[0];
+                popup_a467a752449453bbaa9c31bf3cfa16bd.setContent(html_0c9f9d3425465df2d22c9d2253a21d3a);
+            
+        
+
+        marker_12f11d766099f8ab82c8c996cdcce143.bindPopup(popup_a467a752449453bbaa9c31bf3cfa16bd)
+        ;
+
+        
+    
+    
+            marker_12f11d766099f8ab82c8c996cdcce143.bindTooltip(
+                `<div>
+                     Museum of Liverpool - Click for detailed content
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_12f11d766099f8ab82c8c996cdcce143.setIcon(icon_7a8e4186825b434a19f06f8787e9fc7e);
+            
+    
+            var marker_7a9fc019398abd34b5095df1d1304039 = L.marker(
+                [53.40372, -2.99358],
+                {
+}
+            ).addTo(map_262d7606437b59816c622a5f1982ad77);
+        
+    
+            var icon_5be21dc79295701d38a0f4f6c2be3ce1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_27b5c72007f045008b5266a8a22488ab = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_c0c8d5b1d7414b68c99395547ad10a71 = $(`<div id="html_c0c8d5b1d7414b68c99395547ad10a71" style="width: 100.0%; height: 100.0%;">         <div style="width: 400px;">         <h4>Open Eye Gallery</h4>         <p><b>Location:</b> 19 Mann Island, Liverpool Waterfront, Liverpool, L3 1BP</p>         <p><b>Type:</b> Gallery</p>         <p><b>Website:</b> <a href="https://openeye.org.uk/" target="_blank">Visit Website</a></p>         <p><b>Contact:</b> info@openeye.org.uk</p>         <hr>         <h5>Archive Contents:</h5>         <div style="max-height: 300px; overflow-y: auto;">         <b>Gambia Materials:</b> This photograph gallery changes its exhibitions every three months. West African artists sometimes exhibit.<br><br><b>Access Requirements:</b> Tues-Sun (10:00-17:00)         </div>         </div>         </div>`)[0];
+                popup_27b5c72007f045008b5266a8a22488ab.setContent(html_c0c8d5b1d7414b68c99395547ad10a71);
+            
+        
+
+        marker_7a9fc019398abd34b5095df1d1304039.bindPopup(popup_27b5c72007f045008b5266a8a22488ab)
+        ;
+
+        
+    
+    
+            marker_7a9fc019398abd34b5095df1d1304039.bindTooltip(
+                `<div>
+                     Open Eye Gallery - Click for detailed content
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7a9fc019398abd34b5095df1d1304039.setIcon(icon_5be21dc79295701d38a0f4f6c2be3ce1);
+            
+    
+            var marker_0cc152715a1f8bdd533e0a48b029461f = L.marker(
+                [53.4071, -2.99489],
+                {
+}
+            ).addTo(map_262d7606437b59816c622a5f1982ad77);
+        
+    
+            var icon_40e2fdc77f7051f945d605cea3986c64 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2ba57d73afb09770eac188da931d3243 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_09113c7968e3cef529fde19b70bd793b = $(`<div id="html_09113c7968e3cef529fde19b70bd793b" style="width: 100.0%; height: 100.0%;">         <div style="width: 400px;">         <h4>Our Lady & St Nicholas Church</h4>         <p><b>Location:</b> 5 Old Churchyard, Liverpool, L2 8GW</p>         <p><b>Type:</b> Church</p>         <p><b>Website:</b> <a href="https://livpc.co.uk/" target="_blank">Visit Website</a></p>         <p><b>Contact:</b> enquiries@livpc.co.uk</p>         <hr>         <h5>Archive Contents:</h5>         <div style="max-height: 300px; overflow-y: auto;">         <b>Gambia Materials:</b> This was an historic seafarers church which merchant money helped construct it. Within the church is a roll call of sailors lost in combat.<br><br><b>Finding Aids:</b> Inside is a timeline presentation of the churches history<br><br><b>Access Requirements:</b> Mon-Sun (09:00-17:00)         </div>         </div>         </div>`)[0];
+                popup_2ba57d73afb09770eac188da931d3243.setContent(html_09113c7968e3cef529fde19b70bd793b);
+            
+        
+
+        marker_0cc152715a1f8bdd533e0a48b029461f.bindPopup(popup_2ba57d73afb09770eac188da931d3243)
+        ;
+
+        
+    
+    
+            marker_0cc152715a1f8bdd533e0a48b029461f.bindTooltip(
+                `<div>
+                     Our Lady & St Nicholas Church - Click for detailed content
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0cc152715a1f8bdd533e0a48b029461f.setIcon(icon_40e2fdc77f7051f945d605cea3986c64);
+            
+    
+            var marker_bce8c702dd7a66be437cd34346063740 = L.marker(
+                [53.39037, -3.03608],
+                {
+}
+            ).addTo(map_262d7606437b59816c622a5f1982ad77);
+        
+    
+            var icon_9b800366f3bd5672869e678e70f3e8ad = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e673809e42ed2f3b0585b665e533d396 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_b1d722174fc15f78be516f2384545135 = $(`<div id="html_b1d722174fc15f78be516f2384545135" style="width: 100.0%; height: 100.0%;">         <div style="width: 400px;">         <h4>Shrewsbury Diocesan Archives</h4>         <p><b>Location:</b> 2 Park Road South, Birkenhead, Prenton, Wirral CH43 4UX</p>         <p><b>Type:</b> Church</p>         <p><b>Website:</b> <a href="http://www.dioceseofshrewsbury.org/about-us/diocese-of-shrewsbury/archives" target="_blank">Visit Website</a></p>         <p><b>Contact:</b> pwphillips3@btinternet.com</p>         <hr>         <h5>Archive Contents:</h5>         <div style="max-height: 300px; overflow-y: auto;">         <b>Gambia Materials:</b> No information present<br><br><b>Access Requirements:</b> By appointment only         </div>         </div>         </div>`)[0];
+                popup_e673809e42ed2f3b0585b665e533d396.setContent(html_b1d722174fc15f78be516f2384545135);
+            
+        
+
+        marker_bce8c702dd7a66be437cd34346063740.bindPopup(popup_e673809e42ed2f3b0585b665e533d396)
+        ;
+
+        
+    
+    
+            marker_bce8c702dd7a66be437cd34346063740.bindTooltip(
+                `<div>
+                     Shrewsbury Diocesan Archives - Click for detailed content
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bce8c702dd7a66be437cd34346063740.setIcon(icon_9b800366f3bd5672869e678e70f3e8ad);
+            
+    
+            var marker_2aa71c1b3b0159df79365f2c7f9150bd = L.marker(
+                [53.40264, -2.96383],
+                {
+}
+            ).addTo(map_262d7606437b59816c622a5f1982ad77);
+        
+    
+            var icon_120444042892845adb2ab9f081e7ab7b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1faacbcdd655b4a4e847273bad5d42fb = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_e092fe909ead7bb1351c3197f8c46c04 = $(`<div id="html_e092fe909ead7bb1351c3197f8c46c04" style="width: 100.0%; height: 100.0%;">         <div style="width: 400px;">         <h4>University of Liverpool: Special Collections and Archives</h4>         <p><b>Location:</b> Sydney Jones Library, Chatham Street, Liverpool L7 &BD</p>         <p><b>Type:</b> University</p>         <p><b>Website:</b> <a href="https://libguides.liverpool.ac.uk/library/sca" target="_blank">Visit Website</a></p>         <p><b>Contact:</b> scastaff@liverpool.ac.uk</p>         <hr>         <h5>Archive Contents:</h5>         <div style="max-height: 300px; overflow-y: auto;">         <b>Gambia Materials:</b> James Cubbitt Archive includes architectural & urban design work in Nigeria, Ghana & Sierra Leone (& for the Elder Dempster company)<br><br><b>Thematic Coverage:</b> Within the special collections archive there is not much on West Africa. Individual searches on the catalogue are necessary to find material. The archive also contains part of the Liverpool School of Tropical Medicine archive. It is difficult to determine the extent of material the archive holds.<br><br><b>Finding Aids:</b> Online Search catalogues<br><br><b>Access Requirements:</b> Mon-Fri (10:30-13:00 & 14:00-16:30) & by appointment only         </div>         </div>         </div>`)[0];
+                popup_1faacbcdd655b4a4e847273bad5d42fb.setContent(html_e092fe909ead7bb1351c3197f8c46c04);
+            
+        
+
+        marker_2aa71c1b3b0159df79365f2c7f9150bd.bindPopup(popup_1faacbcdd655b4a4e847273bad5d42fb)
+        ;
+
+        
+    
+    
+            marker_2aa71c1b3b0159df79365f2c7f9150bd.bindTooltip(
+                `<div>
+                     University of Liverpool: Special Collections and Archives - Click for detailed content
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2aa71c1b3b0159df79365f2c7f9150bd.setIcon(icon_120444042892845adb2ab9f081e7ab7b);
+            
+    
+            var marker_6d2d97784459cb67188d41429dd05275 = L.marker(
+                [53.47087, -2.23885],
+                {
+}
+            ).addTo(map_262d7606437b59816c622a5f1982ad77);
+        
+    
+            var icon_619749aa3558ad2507c4f4dcd5100449 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bede9650328e3ce10037abe20e78bffe = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_708284cf9d7866d35bf081c5e486d588 = $(`<div id="html_708284cf9d7866d35bf081c5e486d588" style="width: 100.0%; height: 100.0%;">         <div style="width: 400px;">         <h4>Special Collections Archive</h4>         <p><b>Location:</b> All Saints Library, Manchester Metropolitan University, All Saints Park, Manchester M15 6BH</p>         <p><b>Type:</b> Other</p>         <p><b>Website:</b> <a href="https://www.mmu.ac.uk/special-collections-museum" target="_blank">Visit Website</a></p>         <p><b>Contact:</b> j.parrett@mmu.ac.uk</p>         <hr>         <h5>Archive Contents:</h5>         <div style="max-height: 300px; overflow-y: auto;">         <b>Thematic Coverage:</b> This is a predominantly art, architecture and textile archive. There is a small collection of textiles from the school of art that are simlar to the ABC wax textiles. These were made in the North West and exported to the African market with patterns from West Africa.<br><br><b>Access Requirements:</b> Mon-Fri (09:00-19:00) Sun (11:00-17:00)         </div>         </div>         </div>`)[0];
+                popup_bede9650328e3ce10037abe20e78bffe.setContent(html_708284cf9d7866d35bf081c5e486d588);
+            
+        
+
+        marker_6d2d97784459cb67188d41429dd05275.bindPopup(popup_bede9650328e3ce10037abe20e78bffe)
+        ;
+
+        
+    
+    
+            marker_6d2d97784459cb67188d41429dd05275.bindTooltip(
+                `<div>
+                     Special Collections Archive - Click for detailed content
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6d2d97784459cb67188d41429dd05275.setIcon(icon_619749aa3558ad2507c4f4dcd5100449);
+            
+    
+            var marker_de12e26099cd39cf57fa0d93464f880d = L.marker(
+                [53.45351, -2.73464],
+                {
+}
+            ).addTo(map_262d7606437b59816c622a5f1982ad77);
+        
+    
+            var icon_fcbd270ac781c889b27454a431059154 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c3c458aabe298a04c7eadd6ab75a991d = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_f62c92bf4fc9665896da17fbb739ebdf = $(`<div id="html_f62c92bf4fc9665896da17fbb739ebdf" style="width: 100.0%; height: 100.0%;">         <div style="width: 400px;">         <h4>St Helens Archive</h4>         <p><b>Location:</b> The Gamble Building, Victoria Square, St Helens, Merseyside, WA10 1DY</p>         <p><b>Type:</b> Church</p>         <p><b>Website:</b> <a href="https://www.sthelens.gov.uk/article/3145/St-Helens-Archive-Service" target="_blank">Visit Website</a></p>         <p><b>Contact:</b> archives@sthelens.gov.uk</p>         <hr>         <h5>Archive Contents:</h5>         <div style="max-height: 300px; overflow-y: auto;">         <b>Gambia Materials:</b> The Gamble building which contains the St Helens archive is currently closed for extensive refurbishment.<br><br><b>Access Requirements:</b> No physical access till 2023/2024         </div>         </div>         </div>`)[0];
+                popup_c3c458aabe298a04c7eadd6ab75a991d.setContent(html_f62c92bf4fc9665896da17fbb739ebdf);
+            
+        
+
+        marker_de12e26099cd39cf57fa0d93464f880d.bindPopup(popup_c3c458aabe298a04c7eadd6ab75a991d)
+        ;
+
+        
+    
+    
+            marker_de12e26099cd39cf57fa0d93464f880d.bindTooltip(
+                `<div>
+                     St Helens Archive - Click for detailed content
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_de12e26099cd39cf57fa0d93464f880d.setIcon(icon_fcbd270ac781c889b27454a431059154);
+            
+    
+            var marker_8ec9c60c644052538f9250d288795139 = L.marker(
+                [53.39426, -2.9749],
+                {
+}
+            ).addTo(map_262d7606437b59816c622a5f1982ad77);
+        
+    
+            var icon_4b0837c4dd2fa7b7793c28c95d7ff13b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b4b46b04f24e340d323e91f54b92f550 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_2fde5dc44b42865c8265623730b00a98 = $(`<div id="html_2fde5dc44b42865c8265623730b00a98" style="width: 100.0%; height: 100.0%;">         <div style="width: 400px;">         <h4>St James in the City</h4>         <p><b>Location:</b> Upper St James Place, Upper Parliament Street, L8 1UR</p>         <p><b>Type:</b> Church</p>         <p><b>Website:</b> <a href="https://www.stj.org.uk/" target="_blank">Visit Website</a></p>         <p><b>Contact:</b> info@stj.org.uk</p>         <hr>         <h5>Archive Contents:</h5>         <div style="max-height: 300px; overflow-y: auto;">         <b>Gambia Materials:</b> Historically, seafarers would attend this church.<br><br><b>Access Requirements:</b> Sun (10:30-12:00 & 16:00-17:30) Mon (19:00-21:00) Thurs (10:00-11:30)         </div>         </div>         </div>`)[0];
+                popup_b4b46b04f24e340d323e91f54b92f550.setContent(html_2fde5dc44b42865c8265623730b00a98);
+            
+        
+
+        marker_8ec9c60c644052538f9250d288795139.bindPopup(popup_b4b46b04f24e340d323e91f54b92f550)
+        ;
+
+        
+    
+    
+            marker_8ec9c60c644052538f9250d288795139.bindTooltip(
+                `<div>
+                     St James in the City - Click for detailed content
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8ec9c60c644052538f9250d288795139.setIcon(icon_4b0837c4dd2fa7b7793c28c95d7ff13b);
+            
+    
+            var marker_4ee15e03af04e95ae8a8efb9f59b8866 = L.marker(
+                [53.40881, -2.98105],
+                {
+}
+            ).addTo(map_262d7606437b59816c622a5f1982ad77);
+        
+    
+            var icon_a9d38d6006d7276a8fae901ce4bddac5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7919835ec8e49213bfd21f33be9c6461 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_dda12f1913f4e15051a4112e28a5898a = $(`<div id="html_dda12f1913f4e15051a4112e28a5898a" style="width: 100.0%; height: 100.0%;">         <div style="width: 400px;">         <h4>St John's Gardens</h4>         <p><b>Location:</b> St John's Lane, St George's Place, William Brown Street, Liverpool L1 1JJ</p>         <p><b>Type:</b> Church</p>         <p><b>Website:</b> <a href="https://liverpool.gov.uk/leisure-parks-and-wellbeing/parks-and-greenspaces/st-johns-gardens/" target="_blank">Visit Website</a></p>         <p><b>Contact:</b> </p>         <hr>         <h5>Archive Contents:</h5>         <div style="max-height: 300px; overflow-y: auto;">         <b>Thematic Coverage:</b> Statue of Alexander Balfour - 19th century Liverpool shipping magnate. Statue of Arthur Forwood, merchant and shipowner.<br><br><b>Access Requirements:</b> Open 24 Hours         </div>         </div>         </div>`)[0];
+                popup_7919835ec8e49213bfd21f33be9c6461.setContent(html_dda12f1913f4e15051a4112e28a5898a);
+            
+        
+
+        marker_4ee15e03af04e95ae8a8efb9f59b8866.bindPopup(popup_7919835ec8e49213bfd21f33be9c6461)
+        ;
+
+        
+    
+    
+            marker_4ee15e03af04e95ae8a8efb9f59b8866.bindTooltip(
+                `<div>
+                     St John's Gardens - Click for detailed content
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4ee15e03af04e95ae8a8efb9f59b8866.setIcon(icon_a9d38d6006d7276a8fae901ce4bddac5);
+            
+    
+            var marker_cb46639774401a30d5502b9f65f2af3e = L.marker(
+                [53.40073, -2.99419],
+                {
+}
+            ).addTo(map_262d7606437b59816c622a5f1982ad77);
+        
+    
+            var icon_7cdfe2eb439ba266a59d52b41ef97fc0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e56fd4f4338f33e0c1e03f8888e4d1f9 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_a1c1d4c03fe9b7048fc93b1a67bca7a1 = $(`<div id="html_a1c1d4c03fe9b7048fc93b1a67bca7a1" style="width: 100.0%; height: 100.0%;">         <div style="width: 400px;">         <h4>Tate Liverpool</h4>         <p><b>Location:</b> Royal Albert Dock, Liverpool L3 4BB</p>         <p><b>Type:</b> Gallery</p>         <p><b>Website:</b> <a href="https://www.tate.org.uk/visit/tate-liverpool" target="_blank">Visit Website</a></p>         <p><b>Contact:</b> visiting.liverpool@tate.org.uk</p>         <hr>         <h5>Archive Contents:</h5>         <div style="max-height: 300px; overflow-y: auto;">         <b>Gambia Materials:</b> Certain art works are by artists from West Africa. And certain exhibits are on the theme of slavery or the 'other'. There is no specific theme. The Tate's physical archive is held in London.<br><br><b>Access Requirements:</b> Mon-Sun (10:00-17:50)         </div>         </div>         </div>`)[0];
+                popup_e56fd4f4338f33e0c1e03f8888e4d1f9.setContent(html_a1c1d4c03fe9b7048fc93b1a67bca7a1);
+            
+        
+
+        marker_cb46639774401a30d5502b9f65f2af3e.bindPopup(popup_e56fd4f4338f33e0c1e03f8888e4d1f9)
+        ;
+
+        
+    
+    
+            marker_cb46639774401a30d5502b9f65f2af3e.bindTooltip(
+                `<div>
+                     Tate Liverpool - Click for detailed content
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cb46639774401a30d5502b9f65f2af3e.setIcon(icon_7cdfe2eb439ba266a59d52b41ef97fc0);
+            
+    
+            var marker_9c37cf033c1bcd152d2f2c3cfc47836f = L.marker(
+                [53.40562, -2.99654],
+                {
+}
+            ).addTo(map_262d7606437b59816c622a5f1982ad77);
+        
+    
+            var icon_8d9f0b675eec0188e224bf21ef5c6957 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d496d94fd35b88795782e30126687a1f = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_7efa20df40bb4df5aaebdec97114f4d2 = $(`<div id="html_7efa20df40bb4df5aaebdec97114f4d2" style="width: 100.0%; height: 100.0%;">         <div style="width: 400px;">         <h4>The Three Graces</h4>         <p><b>Location:</b> George's Dock Gates, Liverpool L3 1HU</p>         <p><b>Type:</b> Other</p>         <p><b>Website:</b> <a href="https://www.visitliverpool.com/things-to-do/pier-head-and-the-three-graces-p17747" target="_blank">Visit Website</a></p>         <p><b>Contact:</b> </p>         <hr>         <h5>Archive Contents:</h5>         <div style="max-height: 300px; overflow-y: auto;">         <b>Gambia Materials:</b> The Three Graces (buildings) were all built on money from trade. Much of this would be from trade with West Africa.<br><br><b>Access Requirements:</b> 24 Hour Access         </div>         </div>         </div>`)[0];
+                popup_d496d94fd35b88795782e30126687a1f.setContent(html_7efa20df40bb4df5aaebdec97114f4d2);
+            
+        
+
+        marker_9c37cf033c1bcd152d2f2c3cfc47836f.bindPopup(popup_d496d94fd35b88795782e30126687a1f)
+        ;
+
+        
+    
+    
+            marker_9c37cf033c1bcd152d2f2c3cfc47836f.bindTooltip(
+                `<div>
+                     The Three Graces - Click for detailed content
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9c37cf033c1bcd152d2f2c3cfc47836f.setIcon(icon_8d9f0b675eec0188e224bf21ef5c6957);
+            
+    
+            var marker_af8cbf481f762b59379829903955684d = L.marker(
+                [53.76394, -2.70747],
+                {
+}
+            ).addTo(map_262d7606437b59816c622a5f1982ad77);
+        
+    
+            var icon_c513796f93f57feacb4616229efb7531 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a78c9dd5953e74bb8c186562d18c1fbc = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_9529ad94462367fa69987721bd736acb = $(`<div id="html_9529ad94462367fa69987721bd736acb" style="width: 100.0%; height: 100.0%;">         <div style="width: 400px;">         <h4>University of Central Lancahsire (UCLAN) Library</h4>         <p><b>Location:</b> 52, St Peter's Square, Preston, Lancashire PR1 2 HE</p>         <p><b>Type:</b> University</p>         <p><b>Website:</b> <a href="https://www.uclan.ac.uk/facilities/library" target="_blank">Visit Website</a></p>         <p><b>Contact:</b> subjectlibrarians@uclan.ac.uk</p>         <hr>         <h5>Archive Contents:</h5>         <div style="max-height: 300px; overflow-y: auto;">         <b>Gambia Materials:</b> Some West Africa related titles in the general collections<br><br><b>Finding Aids:</b> Special Collection found in Askew House archive<br><br><b>Access Requirements:</b> Open 24 Hours & 7 days a week in term time         </div>         </div>         </div>`)[0];
+                popup_a78c9dd5953e74bb8c186562d18c1fbc.setContent(html_9529ad94462367fa69987721bd736acb);
+            
+        
+
+        marker_af8cbf481f762b59379829903955684d.bindPopup(popup_a78c9dd5953e74bb8c186562d18c1fbc)
+        ;
+
+        
+    
+    
+            marker_af8cbf481f762b59379829903955684d.bindTooltip(
+                `<div>
+                     University of Central Lancahsire (UCLAN) Library - Click for detailed content
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_af8cbf481f762b59379829903955684d.setIcon(icon_c513796f93f57feacb4616229efb7531);
+            
+    
+            var marker_dcc30a416690d944c9524a296d5104f0 = L.marker(
+                [53.34839, -2.99642],
+                {
+}
+            ).addTo(map_262d7606437b59816c622a5f1982ad77);
+        
+    
+            var icon_76dd95beb3612b57daa61c375b9f6eed = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8c39c9d937cdb5cdcf556b9d7da6fee7 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_0244252a7233be799f4c6ac0df4a319f = $(`<div id="html_0244252a7233be799f4c6ac0df4a319f" style="width: 100.0%; height: 100.0%;">         <div style="width: 400px;">         <h4>Unilever Port Sunlight</h4>         <p><b>Location:</b> Wood Street, Birkenhead, Wirral CH62 4UY</p>         <p><b>Type:</b> Other</p>         <p><b>Website:</b> <a href="https://www.unilever.com/our-company/our-history-and-archives/" target="_blank">Visit Website</a></p>         <p><b>Contact:</b> archives@unilver.com</p>         <hr>         <h5>Archive Contents:</h5>         <div style="max-height: 300px; overflow-y: auto;">         <b>Gambia Materials:</b> Information on all countries will be present within the extensive archive.<br><br><b>Thematic Coverage:</b> Online catalogue: http://unilever-archives.com/ Two links to relevent collections of the United Africa Company: GB1752.UAC… Link 01 - http://unilever-archives.com/Record.aspx?src=CalmView.Catalog&id=GB1752.UAC Link 02 - http://unilever-archives.com/TreeBrowse.aspx?src=CalmView.Catalog&field=RefNo&key=GB1752.UAC Information booklet on the United Africa Company (See Unilever File 01 below)<br><br><b>Access Requirements:</b> 24 Hours         </div>         </div>         </div>`)[0];
+                popup_8c39c9d937cdb5cdcf556b9d7da6fee7.setContent(html_0244252a7233be799f4c6ac0df4a319f);
+            
+        
+
+        marker_dcc30a416690d944c9524a296d5104f0.bindPopup(popup_8c39c9d937cdb5cdcf556b9d7da6fee7)
+        ;
+
+        
+    
+    
+            marker_dcc30a416690d944c9524a296d5104f0.bindTooltip(
+                `<div>
+                     Unilever Port Sunlight - Click for detailed content
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dcc30a416690d944c9524a296d5104f0.setIcon(icon_76dd95beb3612b57daa61c375b9f6eed);
+            
+    
+            var marker_5b564e2d67abc9d300f6b110b2047451 = L.marker(
+                [53.40611, -2.96662],
+                {
+}
+            ).addTo(map_262d7606437b59816c622a5f1982ad77);
+        
+    
+            var icon_811f24840d15902b869f1658d41b4901 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ed083b4e4326354bed09f5ff7680bc23 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_448d795a8b83f32fff0d177fece00c19 = $(`<div id="html_448d795a8b83f32fff0d177fece00c19" style="width: 100.0%; height: 100.0%;">         <div style="width: 400px;">         <h4>Victoria Gallery & Museum</h4>         <p><b>Location:</b> University of Liverpool, Ashton Street, Liverpool L69 3DR</p>         <p><b>Type:</b> Museum</p>         <p><b>Website:</b> <a href="https://vgm.liverpool.ac.uk/" target="_blank">Visit Website</a></p>         <p><b>Contact:</b> vgm@liv.ac.uk</p>         <hr>         <h5>Archive Contents:</h5>         <div style="max-height: 300px; overflow-y: auto;">         <b>Thematic Coverage:</b> Artefacts, decorative arts, ceramics related to slavery and trade are displayed in the permanent collection.<br><br><b>Access Requirements:</b> Tue-Sat (10:00-17:00)         </div>         </div>         </div>`)[0];
+                popup_ed083b4e4326354bed09f5ff7680bc23.setContent(html_448d795a8b83f32fff0d177fece00c19);
+            
+        
+
+        marker_5b564e2d67abc9d300f6b110b2047451.bindPopup(popup_ed083b4e4326354bed09f5ff7680bc23)
+        ;
+
+        
+    
+    
+            marker_5b564e2d67abc9d300f6b110b2047451.bindTooltip(
+                `<div>
+                     Victoria Gallery & Museum - Click for detailed content
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5b564e2d67abc9d300f6b110b2047451.setIcon(icon_811f24840d15902b869f1658d41b4901);
+            
+    
+            var marker_87b6fa544e796e47c5bbfb95fea93d87 = L.marker(
+                [53.40997, -2.97975],
+                {
+}
+            ).addTo(map_262d7606437b59816c622a5f1982ad77);
+        
+    
+            var icon_be312e3fd7de380e8c3c4a519553747c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9b8356bb4141c74d22a8bf309f54a606 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_6774b2efb835f3d44311ce829ca57681 = $(`<div id="html_6774b2efb835f3d44311ce829ca57681" style="width: 100.0%; height: 100.0%;">         <div style="width: 400px;">         <h4>Walker Art Gallery</h4>         <p><b>Location:</b> Willam Brown Street, Liverpool L3 8EL</p>         <p><b>Type:</b> Gallery</p>         <p><b>Website:</b> <a href="https://www.liverpoolmuseums.org.uk/walker-art-gallery" target="_blank">Visit Website</a></p>         <p><b>Contact:</b> thewalker@liverpoolmuseums.ork.uk</p>         <hr>         <h5>Archive Contents:</h5>         <div style="max-height: 300px; overflow-y: auto;">         <b>Access Requirements:</b> Tue-Sun (10:00-18:00)         </div>         </div>         </div>`)[0];
+                popup_9b8356bb4141c74d22a8bf309f54a606.setContent(html_6774b2efb835f3d44311ce829ca57681);
+            
+        
+
+        marker_87b6fa544e796e47c5bbfb95fea93d87.bindPopup(popup_9b8356bb4141c74d22a8bf309f54a606)
+        ;
+
+        
+    
+    
+            marker_87b6fa544e796e47c5bbfb95fea93d87.bindTooltip(
+                `<div>
+                     Walker Art Gallery - Click for detailed content
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_87b6fa544e796e47c5bbfb95fea93d87.setIcon(icon_be312e3fd7de380e8c3c4a519553747c);
+            
+    
+            var marker_06c5dc417a286a24f6e1215275ce0fd2 = L.marker(
+                [53.42896, -3.04581],
+                {
+}
+            ).addTo(map_262d7606437b59816c622a5f1982ad77);
+        
+    
+            var icon_b69c7914d0b2b83787026680cb08fca6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "pink",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_43313852faa4d3c4e77301275de17acf = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_4c3afd7b2b88f59b97c9971dbb5ff20d = $(`<div id="html_4c3afd7b2b88f59b97c9971dbb5ff20d" style="width: 100.0%; height: 100.0%;">         <div style="width: 400px;">         <h4>Wallasey Historical Society</h4>         <p><b>Location:</b> Wallasey Central Library, 17 Earlston Road, New Brighton, Wallasey CH45 5DX</p>         <p><b>Type:</b> Historical Society</p>         <p><b>Website:</b> <a href="https://www.wirral.gov.uk/libraries-and-archives/find-library/wallasey-central-library" target="_blank">Visit Website</a></p>         <p><b>Contact:</b> </p>         <hr>         <h5>Archive Contents:</h5>         <div style="max-height: 300px; overflow-y: auto;">         <b>Thematic Coverage:</b> The archive contains the electorial register and records on local history and shipping. The shipping historical records are three paper folders (yet to be catalogued) which may have West African content. There is a paper file on slavery, specifically Sir John Tobins who was a 19th century slave trader and merchant with estates in West Africa.<br><br><b>Access Requirements:</b> Mon-Sat (09:00-13:00 & 14:00-17:00)         </div>         </div>         </div>`)[0];
+                popup_43313852faa4d3c4e77301275de17acf.setContent(html_4c3afd7b2b88f59b97c9971dbb5ff20d);
+            
+        
+
+        marker_06c5dc417a286a24f6e1215275ce0fd2.bindPopup(popup_43313852faa4d3c4e77301275de17acf)
+        ;
+
+        
+    
+    
+            marker_06c5dc417a286a24f6e1215275ce0fd2.bindTooltip(
+                `<div>
+                     Wallasey Historical Society - Click for detailed content
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_06c5dc417a286a24f6e1215275ce0fd2.setIcon(icon_b69c7914d0b2b83787026680cb08fca6);
+            
+    
+            var marker_9da5eebc5791b59f55ce672efb54f383 = L.marker(
+                [53.40743, -2.99327],
+                {
+}
+            ).addTo(map_262d7606437b59816c622a5f1982ad77);
+        
+    
+            var icon_59c11d8d43ad2e4445c54fc164ca0c16 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5cd13f81d65b4c04c5bc590e3b4050d2 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_941310d161cbc8b9dcf6f0ba8f12720c = $(`<div id="html_941310d161cbc8b9dcf6f0ba8f12720c" style="width: 100.0%; height: 100.0%;">         <div style="width: 400px;">         <h4>Western Approaches Museum</h4>         <p><b>Location:</b> 1-3 Rumford Street, Liverpool, L2 8SZ</p>         <p><b>Type:</b> Museum</p>         <p><b>Website:</b> <a href="https://liverpoolwarmuseum.co.uk/" target="_blank">Visit Website</a></p>         <p><b>Contact:</b> info@westernapproaches.org.uk</p>         <hr>         <h5>Archive Contents:</h5>         <div style="max-height: 300px; overflow-y: auto;">         <b>Gambia Materials:</b> The focus of this archive is on World War II and the British west coast not on West Africa.<br><br><b>Access Requirements:</b> Mon-Sun (10:00-17:00)         </div>         </div>         </div>`)[0];
+                popup_5cd13f81d65b4c04c5bc590e3b4050d2.setContent(html_941310d161cbc8b9dcf6f0ba8f12720c);
+            
+        
+
+        marker_9da5eebc5791b59f55ce672efb54f383.bindPopup(popup_5cd13f81d65b4c04c5bc590e3b4050d2)
+        ;
+
+        
+    
+    
+            marker_9da5eebc5791b59f55ce672efb54f383.bindTooltip(
+                `<div>
+                     Western Approaches Museum - Click for detailed content
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9da5eebc5791b59f55ce672efb54f383.setIcon(icon_59c11d8d43ad2e4445c54fc164ca0c16);
+            
+    
+            var marker_fbba0314a6bc4fb4d28c77fe681ddec6 = L.marker(
+                [53.46014, -2.22934],
+                {
+}
+            ).addTo(map_262d7606437b59816c622a5f1982ad77);
+        
+    
+            var icon_7ded2c5969362121c2f99a2e6cba7fb4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_74b35923dbf492055efc81993336d7dc = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_b441a67e8fba8e81dde2180b726d157f = $(`<div id="html_b441a67e8fba8e81dde2180b726d157f" style="width: 100.0%; height: 100.0%;">         <div style="width: 400px;">         <h4>Whitworth Art Gallery</h4>         <p><b>Location:</b> Oxford Road, Manchester M15 6ER</p>         <p><b>Type:</b> Gallery</p>         <p><b>Website:</b> <a href="https://www.whitworth.manchester.ac.uk/" target="_blank">Visit Website</a></p>         <p><b>Contact:</b> amy.george@manchester.ac.uk</p>         <hr>         <h5>Archive Contents:</h5>         <div style="max-height: 300px; overflow-y: auto;">         <b>Thematic Coverage:</b> This archive is predominantly textiles with some connections to West Africa. Some are dated from 1824 and others are from the 20th century. The gallerys collections are available to search on: http://gallerysearch.ds.man.ac.uk/<br><br><b>Access Requirements:</b> Tues-Sun (10:00-17:00)         </div>         </div>         </div>`)[0];
+                popup_74b35923dbf492055efc81993336d7dc.setContent(html_b441a67e8fba8e81dde2180b726d157f);
+            
+        
+
+        marker_fbba0314a6bc4fb4d28c77fe681ddec6.bindPopup(popup_74b35923dbf492055efc81993336d7dc)
+        ;
+
+        
+    
+    
+            marker_fbba0314a6bc4fb4d28c77fe681ddec6.bindTooltip(
+                `<div>
+                     Whitworth Art Gallery - Click for detailed content
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fbba0314a6bc4fb4d28c77fe681ddec6.setIcon(icon_7ded2c5969362121c2f99a2e6cba7fb4);
+            
+    
+            var marker_850697b8ddb2a42e9e70d7a134387608 = L.marker(
+                [53.38488, -3.04042],
+                {
+}
+            ).addTo(map_262d7606437b59816c622a5f1982ad77);
+        
+    
+            var icon_61522b9933c64923f17cd307bcb775cb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_131a90958ee90500856943b405e9d3f0 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_dd3e8af9a14870df107570988b1cc241 = $(`<div id="html_dd3e8af9a14870df107570988b1cc241" style="width: 100.0%; height: 100.0%;">         <div style="width: 400px;">         <h4>Williamson Art Gallery & Museum</h4>         <p><b>Location:</b> Slatey Road, Oxton, Birkenhead, Prenton CH43 4UE</p>         <p><b>Type:</b> Museum</p>         <p><b>Website:</b> <a href="https://williamsonartgallery.org/collections/" target="_blank">Visit Website</a></p>         <p><b>Contact:</b> niallhodson@wirral.gov.uk</p>         <hr>         <h5>Archive Contents:</h5>         <div style="max-height: 300px; overflow-y: auto;">         <b>Thematic Coverage:</b> The museum a number of West African related artefacts. It has a permanent maritime exhibit that displays extensive shipping material. It retains a pair of slave shackles that would have been used on board a slave ship in the 19th century. The card catalogue was advised as the best method for researching information.<br><br><b>Finding Aids:</b> Card Catalogue<br><br><b>Access Requirements:</b> Wed-Thur (10:30-17:00), Fri (10:30-21:00) Sat (10:00-16:30)         </div>         </div>         </div>`)[0];
+                popup_131a90958ee90500856943b405e9d3f0.setContent(html_dd3e8af9a14870df107570988b1cc241);
+            
+        
+
+        marker_850697b8ddb2a42e9e70d7a134387608.bindPopup(popup_131a90958ee90500856943b405e9d3f0)
+        ;
+
+        
+    
+    
+            marker_850697b8ddb2a42e9e70d7a134387608.bindTooltip(
+                `<div>
+                     Williamson Art Gallery & Museum - Click for detailed content
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_850697b8ddb2a42e9e70d7a134387608.setIcon(icon_61522b9933c64923f17cd307bcb775cb);
+            
+    
+            var marker_00256a08e9db9ccae1f27c3d955ee73a = L.marker(
+                [53.39599, -3.01448],
+                {
+}
+            ).addTo(map_262d7606437b59816c622a5f1982ad77);
+        
+    
+            var icon_cd126861ae27450390cfb5432bf048ba = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ba95f19c9c51c3b9990e42bdc0668841 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_351f7512ba09e79cf792d964c45d9404 = $(`<div id="html_351f7512ba09e79cf792d964c45d9404" style="width: 100.0%; height: 100.0%;">         <div style="width: 400px;">         <h4>Wirral Archives</h4>         <p><b>Location:</b> Lower Ground Floor, Cheshire Lines Building, Canning Street, Birkenhead Ch41 1AU</p>         <p><b>Type:</b> Archives</p>         <p><b>Website:</b> <a href="https://www.wirral.gov.uk/libraries-and-archives/wirral-archives-service" target="_blank">Visit Website</a></p>         <p><b>Contact:</b> archives@wirral.gov.uk</p>         <hr>         <h5>Archive Contents:</h5>         <div style="max-height: 300px; overflow-y: auto;">         <b>Gambia Materials:</b> The archive contains material related to all four countries but with a specifc reference to Nigeria and various expeditions along the river Niger.<br><br><b>Thematic Coverage:</b> The archive contains maritime records, a letter book archive and an online newspaper archive. There are many West African links in the material. There is information on antislavery, business, shipping and McGregor Laird (shipping magnate). The archive contains his memoirs and information on his expeditions up the river Niger in West Africa in 1838, 1843, 1852, 1854, 1857 & 1858. McGregor Laird was involved in setting up the West African Steamship Company that later became Elder Dempster. Two key texts: 'White Dreams Black Africa' (Howard Temperley) & 'Conquest of the Niger by Land and Sea' (David Hollett)<br><br><b>Access Requirements:</b> Mon-Fri (10:00-16:30)         </div>         </div>         </div>`)[0];
+                popup_ba95f19c9c51c3b9990e42bdc0668841.setContent(html_351f7512ba09e79cf792d964c45d9404);
+            
+        
+
+        marker_00256a08e9db9ccae1f27c3d955ee73a.bindPopup(popup_ba95f19c9c51c3b9990e42bdc0668841)
+        ;
+
+        
+    
+    
+            marker_00256a08e9db9ccae1f27c3d955ee73a.bindTooltip(
+                `<div>
+                     Wirral Archives - Click for detailed content
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_00256a08e9db9ccae1f27c3d955ee73a.setIcon(icon_cd126861ae27450390cfb5432bf048ba);
+            
+    
+            var marker_36b654b89671db9a8159d92ad8fa0913 = L.marker(
+                [53.40999, -2.98139],
+                {
+}
+            ).addTo(map_262d7606437b59816c622a5f1982ad77);
+        
+    
+            var icon_8910113ac8438b51c071a2a21793ac0f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6b6cd139bdf41bec1825232fdda9b93e = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_154b5c453b1fce0bbb9adee782a4d842 = $(`<div id="html_154b5c453b1fce0bbb9adee782a4d842" style="width: 100.0%; height: 100.0%;">         <div style="width: 400px;">         <h4>World Museum</h4>         <p><b>Location:</b> William Brown Street, Liverpool, L3 8EN</p>         <p><b>Type:</b> Museum</p>         <p><b>Website:</b> <a href="https://www.liverpoolmuseums.org.uk/world-museum" target="_blank">Visit Website</a></p>         <p><b>Contact:</b> enquiries@liverpoolmuseum.org.uk</p>         <hr>         <h5>Archive Contents:</h5>         <div style="max-height: 300px; overflow-y: auto;">         <b>Gambia Materials:</b> The permanent collection includes artefacts (predominantly sculptures) from Western & Central Africa. Most from between 1895-1916 & brought to Liverpool by traders<br><br><b>Thematic Coverage:</b> Several of these themes are present in the exhibition to varying extents.<br><br><b>Access Requirements:</b> Mon (closed) Tue-Sun (10:00-18:00)         </div>         </div>         </div>`)[0];
+                popup_6b6cd139bdf41bec1825232fdda9b93e.setContent(html_154b5c453b1fce0bbb9adee782a4d842);
+            
+        
+
+        marker_36b654b89671db9a8159d92ad8fa0913.bindPopup(popup_6b6cd139bdf41bec1825232fdda9b93e)
+        ;
+
+        
+    
+    
+            marker_36b654b89671db9a8159d92ad8fa0913.bindTooltip(
+                `<div>
+                     World Museum - Click for detailed content
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_36b654b89671db9a8159d92ad8fa0913.setIcon(icon_8910113ac8438b51c071a2a21793ac0f);
+            
+</script>
+</html>
